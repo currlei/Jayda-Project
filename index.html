@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Jayda's 7th Birthday — A Whole New World Awaits</title>
+<link rel="stylesheet" href="styles.css">
+ <script src="script.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="stars" aria-hidden="true"></div>
+<div id="emberLayer" aria-hidden="true"></div>
+
+<!-- Top header (desktop) + mobile toggle -->
+<header class="site-header" role="banner">
+  <div class="site-header-inner">
+    <div class="site-brand">Jayda's 7th</div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#hero">Invite</a>
+      <a href="#facts">Facts</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#details">Details</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#faq">FAQs</a>
+      <a href="#gifts">Gifts</a>
+      <a href="#rsvp">RSVP</a>
+    </nav>
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<nav class="section-nav" aria-label="Section navigation">
+  <a href="#hero" data-target="hero"><span class="tip">Invitation</span></a>
+  <a href="#countdown" data-target="countdown"><span class="tip">Countdown</span></a>
+  <a href="#facts" data-target="facts"><span class="tip">Facts</span></a>
+  <a href="#gallery" data-target="gallery"><span class="tip">Gallery</span></a>
+  <a href="#details" data-target="details"><span class="tip">Details</span></a>
+  <a href="#timeline" data-target="timeline"><span class="tip">Timeline</span></a>
+  <a href="#faq" data-target="faq"><span class="tip">FAQs</span></a>
+  <a href="#gifts" data-target="gifts"><span class="tip">Gifts</span></a>
+  <a href="#rsvp" data-target="rsvp"><span class="tip">RSVP</span></a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-moon" aria-hidden="true"></div>
+  <svg class="hero-skyline" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="skylineGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#15305C"/>
+        <stop offset="100%" stop-color="#0A1730"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#skylineGrad)" d="M0,220 L0,140 L40,140 L40,100 L60,80 L80,100 L80,140 L130,140 L130,60 Q130,40 150,40 Q170,40 170,60 L170,140 L210,140 L210,110 L230,90 L250,110 L250,140 L300,140 L300,70 L320,50 L340,70 L340,140 L390,140 L390,30 Q390,10 410,10 Q430,10 430,30 L430,140 L480,140 L480,95 L500,75 L520,95 L520,140 L580,140 L580,55 Q580,35 600,35 Q620,35 620,55 L620,140 L670,140 L670,100 L690,80 L710,100 L710,140 L760,140 L760,45 Q760,20 785,20 Q810,20 810,45 L810,140 L860,140 L860,90 L880,70 L900,90 L900,140 L950,140 L950,65 Q950,40 975,40 Q1000,40 1000,65 L1000,140 L1050,140 L1050,110 L1070,95 L1090,110 L1090,140 L1200,140 L1200,220 Z"/>
+  </svg>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">You are invited to</p>
+    <h1 class="hero-title">A Whole New <span class="accent">World</span></h1>
+    <p class="hero-name">Jayda Reisse turns 7</p>
+    <p class="hero-eyebrow" style="margin-top:0.5rem;">Open Your Invitation</p>
+
+    <div class="hero-invite-lamp">
+      <div class="lamp-stage mini" id="lampStage">
+        <div class="smoke-wrap" id="smokeWrap" aria-hidden="true"></div>
+        <div class="lamp-glow" aria-hidden="true"></div>
+        <div class="lamp-wrap">
+          <button class="lamp-button" id="lampButton" aria-label="Tap the lamp to open your invitation" aria-expanded="false">
+            <svg class="lamp-svg" viewBox="0 0 220 150" aria-hidden="true">
+              <ellipse cx="110" cy="132" rx="58" ry="7" fill="#D4AF37" opacity="0.2"/>
+              <path d="M40 95
+                       C40 70 60 58 90 56
+                       C88 44 96 34 112 34
+                       C126 34 134 43 133 54
+                       C148 50 160 58 162 70
+                       C175 66 186 74 185 86
+                       C184 96 172 100 162 98
+                       L162 100
+                       C162 112 148 120 130 120
+                       L60 120
+                       C46 120 40 110 40 95 Z"
+                    fill="#D4AF37" stroke="#F5D27A" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M162 84 C176 80 192 82 198 92 C200 96 197 99 193 97 C188 94 178 92 168 94"
+                    fill="#D4AF37" stroke="#F5D27A" stroke-width="2.5" stroke-linejoin="round"/>
+              <ellipse cx="113" cy="32" rx="10" ry="5.5" fill="#8B3A9E" stroke="#F5D27A" stroke-width="1.8"/>
+              <rect x="108" y="22" width="10" height="10" rx="2" fill="#D4AF37" stroke="#F5D27A" stroke-width="1.5"/>
+              <ellipse cx="100" cy="121" rx="46" ry="7" fill="#B8932A" stroke="#F5D27A" stroke-width="1.5"/>
+              <circle cx="65" cy="100" r="2.6" fill="#F7EFD8"/>
+              <circle cx="90" cy="106" r="2.6" fill="#F7EFD8"/>
+              <circle cx="120" cy="104" r="2.6" fill="#F7EFD8"/>
+              <circle cx="145" cy="92" r="2.6" fill="#F7EFD8"/>
+              <path d="M70 70 Q100 60 130 68" stroke="#F7EFD8" stroke-width="1.5" fill="none" opacity="0.6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="jasmine-sprig" aria-hidden="true">
+      <svg viewBox="0 0 140 24" width="140" height="24">
+        <g fill="none" stroke="#3DBFAE" stroke-width="1.4" opacity="0.85">
+          <path d="M0 12 H45"/><path d="M95 12 H140"/>
+        </g>
+        <g transform="translate(70,12)">
+          <circle r="3.4" fill="#F7EFD8"/>
+          <g fill="#F7EFD8" opacity="0.95">
+            <ellipse cx="0" cy="-7" rx="3.2" ry="5" transform="rotate(0)"/>
+            <ellipse cx="6" cy="-3.5" rx="3.2" ry="5" transform="rotate(72)"/>
+            <ellipse cx="4" cy="5.5" rx="3.2" ry="5" transform="rotate(144)"/>
+            <ellipse cx="-4" cy="5.5" rx="3.2" ry="5" transform="rotate(216)"/>
+            <ellipse cx="-6" cy="-3.5" rx="3.2" ry="5" transform="rotate(288)"/>
+          </g>
+          <circle r="2" fill="#3DBFAE"/>
+        </g>
+        <g transform="translate(40,12) scale(0.55)" fill="#F7EFD8" opacity="0.7">
+          <circle r="3.4"/>
+          <ellipse cx="0" cy="-7" rx="3.2" ry="5"/><ellipse cx="6" cy="-3.5" rx="3.2" ry="5" transform="rotate(72)"/>
+          <ellipse cx="4" cy="5.5" rx="3.2" ry="5" transform="rotate(144)"/><ellipse cx="-4" cy="5.5" rx="3.2" ry="5" transform="rotate(216)"/>
+          <ellipse cx="-6" cy="-3.5" rx="3.2" ry="5" transform="rotate(288)"/>
+        </g>
+        <g transform="translate(100,12) scale(0.55)" fill="#F7EFD8" opacity="0.7">
+          <circle r="3.4"/>
+          <ellipse cx="0" cy="-7" rx="3.2" ry="5"/><ellipse cx="6" cy="-3.5" rx="3.2" ry="5" transform="rotate(72)"/>
+          <ellipse cx="4" cy="5.5" rx="3.2" ry="5" transform="rotate(144)"/><ellipse cx="-4" cy="5.5" rx="3.2" ry="5" transform="rotate(216)"/>
+          <ellipse cx="-6" cy="-3.5" rx="3.2" ry="5" transform="rotate(288)"/>
+        </g>
+      </svg>
+    </div>
+    <p class="hero-jasmine-note">✨ A Jasmine &amp; Aladdin Celebration ✨</p>
+
+    <p class="lamp-hint" id="lampHint">✨ Tap the lamp to open your invitation ✨</p>
+
+    <div class="invite-card-wrap">
+      <div class="invite-card" id="inviteCard">
+        <div class="corner tl"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="2" cy="32" r="2.5" fill="#F5D27A"/></svg></div>
+        <div class="corner tr"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="2" cy="32" r="2.5" fill="#F5D27A"/></svg></div>
+        <div class="corner bl"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="2" cy="32" r="2.5" fill="#F5D27A"/></svg></div>
+        <div class="corner br"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="2" cy="32" r="2.5" fill="#F5D27A"/></svg></div>
+
+        <div class="seal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#15305C" stroke-width="1.8"><path d="M12 2l2.4 6.6L21 9l-5 4.5 1.6 7-5.6-3.8L6.4 20.5 8 13.5 3 9l6.6-.4z"/></svg>
+        </div>
+        <p class="card-eyebrow">The pleasure of your company is requested</p>
+        <p class="card-line">"Trust in me, and let me share<br>this wish, this dream, this day so rare."</p>
+        <div class="card-divider"></div>
+        <p class="card-eyebrow">Celebrating</p>
+        <p class="card-name" style="text-align:center;">Jayda Reisse's 7th Birthday Celebration</p>
+        <div class="card-meta">
+          <strong>When</strong>
+          Sunday, August 9, 2026 · 5:00 PM
+          <strong>Where</strong>
+          Paragos, Bayambang, Pangasinan
+          <strong>Dress code</strong>
+          Come as you are — costumes &amp; Aladdin/Jasmine looks warmly encouraged!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="seven-items">
+  <div class="section-head">
+    <p class="section-eyebrow">Seven Wishes &amp; Treasures</p>
+    <div class="section-head-row">
+      <h2 class="section-title">Seven Symbolic Items</h2>
+      <button class="item-toggle" id="itemToggleBtn" aria-expanded="false">Show items</button>
+    </div>
+    <div class="divider"></div>
+  </div>
+  <div class="item-card single-card">
+    <div class="corner tl"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/></svg></div>
+    <div class="corner tr"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/></svg></div>
+    <div class="corner bl"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/></svg></div>
+    <div class="corner br"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/></svg></div>
+    <div class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#15305C" stroke-width="1.8"><path d="M12 2l2.4 6.6L21 9l-5 4.5 1.6 7-5.6-3.8L6.4 20.5 8 13.5 3 9l6.6-.4z"/></svg></div>
+    <!-- item-actions removed: export/reset buttons disabled per request -->
+    <p class="item-card-intro">Each symbolic item holds seven guests. Tap any name to edit it, then press Enter or click away to save.</p>
+    <div class="item-list collapsed" id="itemList">
+      <div class="item-group">
+        <h3>7 Symbolic Gifts</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="0" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="0" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="0" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="0" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="0" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="0" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="0" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+      <div class="item-group">
+        <h3>7 Treasures</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="1" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="1" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="1" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="1" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="1" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="1" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="1" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+      <div class="item-group">
+        <h3>7 Candles &amp; Wish</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="2" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="2" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="2" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="2" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="2" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="2" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="2" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+      <div class="item-group">
+        <h3>7 Roses</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="3" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="3" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="3" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="3" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="3" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="3" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="3" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+      <div class="item-group">
+        <h3>7 Dogs (stuffed toy)</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="4" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="4" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="4" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="4" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="4" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="4" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="4" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+      <div class="item-group">
+        <h3>7 Dress</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="5" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="5" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="5" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="5" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="5" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="5" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="5" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+      <div class="item-group">
+        <h3>7 Sleepwear</h3>
+        <ul class="people-list">
+          <li class="person-entry"><span class="person-order">1</span><span class="person-name" data-item="6" data-index="0" contenteditable="false">Guest 1</span></li>
+          <li class="person-entry"><span class="person-order">2</span><span class="person-name" data-item="6" data-index="1" contenteditable="false">Guest 2</span></li>
+          <li class="person-entry"><span class="person-order">3</span><span class="person-name" data-item="6" data-index="2" contenteditable="false">Guest 3</span></li>
+          <li class="person-entry"><span class="person-order">4</span><span class="person-name" data-item="6" data-index="3" contenteditable="false">Guest 4</span></li>
+          <li class="person-entry"><span class="person-order">5</span><span class="person-name" data-item="6" data-index="4" contenteditable="false">Guest 5</span></li>
+          <li class="person-entry"><span class="person-order">6</span><span class="person-name" data-item="6" data-index="5" contenteditable="false">Guest 6</span></li>
+          <li class="person-entry"><span class="person-order">7</span><span class="person-name" data-item="6" data-index="6" contenteditable="false">Guest 7</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CELEBRANT FACTS ===================== -->
+<section class="section reveal-stagger" id="facts">
+  <p class="section-eyebrow reveal">Celebrant Facts</p>
+  <h2 class="section-title reveal">All About Jayda</h2>
+  <div class="divider reveal"></div>
+  <div style="height:1rem"></div>
+  <div class="facts-grid reveal">
+    <div class="facts-left">
+      <div class="fact-card">
+        <h3>Favorite Story</h3>
+        <p>Jayda loves Jasmine, magic lamps, and adventures that feel like flying on a carpet.</p>
+      </div>
+      <div class="fact-card">
+        <h3>Color Palette</h3>
+        <p>Gold, purple, teal, and starry midnight skies are her favorite celebration colors.</p>
+      </div>
+      <div class="fact-card">
+        <h3>Best Treat</h3>
+        <p>She smiles brightest with cake, sparkles, and a little jasmine tea on the side.</p>
+      </div>
+      <div class="fact-card">
+        <h3>Fun Habit</h3>
+        <p>Jayda loves dressing up, making wishes, and sharing stuffed animals with friends.</p>
+      </div>
+    </div>
+    <div class="facts-right">
+      <div class="video-placeholder">
+        <div class="video-icon">▶</div>
+        <div class="video-copy">
+          <strong>Video placeholder</strong>
+          <p>Tap to replace with Jayda's party preview or a sweet celebrant message.</p>
+        </div>
+      </div>
+      <div class="photo-scroll" aria-label="Jayda photo accent">
+        <div class="photo-thumb">Photo 1</div>
+        <div class="photo-thumb">Photo 2</div>
+        <div class="photo-thumb">Photo 3</div>
+        <div class="photo-thumb">Photo 4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COUNTDOWN ===================== -->
+<section class="section countdown-section reveal" id="countdown">
+  <p class="section-eyebrow">The Magic Carpet Is Almost Here</p>
+  <h2 class="section-title">Counting Down</h2>
+  <div class="divider"></div>
+  <div style="height:2rem"></div>
+  <div id="countdownDisplay"></div>
+  <a class="add-cal" id="addCalBtn" href="#" download="Jayda-7th-Birthday.ics">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 9h18"/></svg>
+    Add to Calendar
+  </a>
+  <div class="weather-note">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.4-1.5A5 5 0 0 0 6 18.5"/></svg>
+    August in Pangasinan can bring sudden showers — we'll have a covered area, but pack a small umbrella just in case!
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="section reveal-stagger" id="gallery">
+  <p class="section-eyebrow reveal">Our Little Princess, Through the Years</p>
+  <h2 class="section-title reveal">Jayda's Story So Far</h2>
+  <div class="divider reveal"></div>
+  <div style="height:2rem"></div>
+
+  <div class="gallery-grid">
+    <div class="polaroid stagger-child rot-l">
+      <div class="polaroid-photo ph-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>
+      </div>
+      <p class="polaroid-cap">add a photo ✨</p>
+    </div>
+    <div class="polaroid stagger-child rot-r">
+      <div class="polaroid-photo ph-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>
+      </div>
+      <p class="polaroid-cap">add a photo ✨</p>
+    </div>
+    <div class="polaroid stagger-child rot-l">
+      <div class="polaroid-photo ph-3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>
+      </div>
+      <p class="polaroid-cap">add a photo ✨</p>
+    </div>
+    <div class="polaroid stagger-child rot-r">
+      <div class="polaroid-photo ph-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5-5-4 4-3-3-5 5"/></svg>
+      </div>
+      <p class="polaroid-cap">add a photo ✨</p>
+    </div>
+  </div>
+  <p class="gallery-note">📸 Swap these placeholders with your favorite photos of Jayda before sharing the invite!</p>
+</section>
+
+<!-- ===================== DETAILS ===================== -->
+<section class="section reveal-stagger" id="details">
+  <p class="section-eyebrow reveal">Know Before You Go</p>
+
+  <h2 class="section-title reveal">Party Details</h2>
+  <div class="divider reveal"></div>
+  <div style="height:1rem"></div>
+
+  <div class="details-grid">
+    <div class="detail-card stagger-child">
+      <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+      <div>
+        <p class="detail-h">Venue</p>
+        <p class="detail-p">Paragos, Bayambang, Pangasinan<br><a href="#mapSection">View on map ↓</a></p>
+      </div>
+    </div>
+    <div class="detail-card stagger-child">
+      <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <div>
+        <p class="detail-h">Date &amp; Time</p>
+        <p class="detail-p">Sunday, August 9, 2026<br>Doors open 5:00 PM</p>
+      </div>
+    </div>
+    <div class="detail-card stagger-child">
+      <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 8a2 2 0 0 0-2-2h-3.17L14 4H10L8.17 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8z"/><circle cx="12" cy="13" r="3"/></svg></div>
+      <div>
+        <p class="detail-h">Photo Moments</p>
+        <p class="detail-p">A genie's-lamp photo corner will be set up — feel free to snap away and tag us!</p>
+      </div>
+    </div>
+    <div class="detail-card stagger-child">
+      <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div>
+        <p class="detail-h">Costumes Welcome</p>
+        <p class="detail-p">Little princes &amp; princesses are welcome to dress up — but everyday clothes are just as magical.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-embed reveal" id="mapSection">
+    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Paragos%2C+Bayambang%2C+Pangasinan&output=embed"
+      title="Map to Paragos, Bayambang, Pangasinan"></iframe>
+  </div>
+</section>
+
+<!-- ===================== TIMELINE ===================== -->
+<section class="section" id="timeline">
+  <p class="section-eyebrow reveal">Our Journey Through the Afternoon</p>
+  <h2 class="section-title reveal">The Day's Timeline</h2>
+  <div class="divider reveal"></div>
+  <div style="height:2.2rem"></div>
+
+  <div class="timeline" id="timelineList">
+    <div class="tl-item reveal">
+      <div class="tl-dot">🪔</div>
+      <p class="tl-time">5:00 PM</p>
+      <p class="tl-title">Arrival &amp; Welcome</p>
+      <p class="tl-desc">Guests arrive, find their seats, and enjoy welcome treats.</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot">🎈</div>
+      <p class="tl-time">5:30 PM</p>
+      <p class="tl-title">Games &amp; Magic Carpet Fun</p>
+      <p class="tl-desc">Kids' games and a few Agrabah-themed surprises.</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot">🍽️</div>
+      <p class="tl-time">6:15 PM</p>
+      <p class="tl-title">Dinner Is Served</p>
+      <p class="tl-desc">A feast fit for a princess — buffet opens for all guests.</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot">🎂</div>
+      <p class="tl-time">7:00 PM</p>
+      <p class="tl-title">Cake &amp; Birthday Wish</p>
+      <p class="tl-desc">Jayda makes her wish — join us for the cake-cutting moment!</p>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot">💜</div>
+      <p class="tl-time">7:30 PM</p>
+      <p class="tl-title">Dance, Photos &amp; Farewell</p>
+      <p class="tl-desc">Open dance floor, photo booth, and party favors on the way out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section reveal-stagger" id="faq">
+  <p class="section-eyebrow reveal">Wishes Granted</p>
+  <h2 class="section-title reveal">Frequently Asked Questions</h2>
+  <div class="divider reveal"></div>
+  <div style="height:2rem"></div>
+
+  <div id="faqList">
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>When and where is the party?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>Sunday, August 9, 2026, starting at 5:00 PM, at Paragos, Bayambang, Pangasinan. Tap the map above for directions.</p></div>
+    </div>
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>Should kids wear costumes?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>It's optional but encouraged! Aladdin, Jasmine, or any favorite character outfit is welcome — comfy everyday clothes are perfectly fine too.</p></div>
+    </div>
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>Are siblings and other kids welcome?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes! The more little guests, the merrier. Just let us know the headcount in the RSVP form below.</p></div>
+    </div>
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>Will food be provided?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes, a full dinner buffet will be served around 6:15 PM, along with snacks and drinks throughout the party.</p></div>
+    </div>
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>Is parking available?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes, there's parking space on-site at the venue. If it fills up, street parking nearby is available too.</p></div>
+    </div>
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>Do I need to bring a gift?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>Your presence is the real gift! If you'd like to send something anyway, see the Gifts section below.</p></div>
+    </div>
+    <div class="faq-item stagger-child">
+      <button class="faq-q"><span>By when should I RSVP?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>Please RSVP by August 1, 2026, so we can prepare seats and food for everyone comfortably.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GIFTS ===================== -->
+<section class="section reveal" id="gifts">
+  <p class="section-eyebrow">A Note On Treasures</p>
+  <h2 class="section-title">Gifts</h2>
+  <div class="divider"></div>
+  <div style="height:2rem"></div>
+
+  <div class="gift-card">
+    <svg class="chest-icon" viewBox="0 0 64 64" fill="none" stroke="#F5D27A" stroke-width="2.5"><rect x="8" y="26" width="48" height="26" rx="3"/><path d="M8 26c0-9 8-16 24-16s24 7 24 16"/><circle cx="32" cy="36" r="3"/></svg>
+    <p style="font-size:0.95rem; color:rgba(247,239,216,0.88); line-height:1.6;">
+      Your presence at Jayda's celebration is truly the greatest gift of all. For those who've asked, a small cash gift is welcome and can be sent via the QR code below.
+    </p>
+    <div class="qr-box" id="qrBox" aria-label="Sample e-wallet QR code placeholder">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" fill="#fff"/>
+        <g fill="#0A1730">
+          <rect x="6" y="6" width="22" height="22"/><rect x="10" y="10" width="14" height="14" fill="#fff"/><rect x="14" y="14" width="6" height="6"/>
+          <rect x="72" y="6" width="22" height="22"/><rect x="76" y="10" width="14" height="14" fill="#fff"/><rect x="80" y="14" width="6" height="6"/>
+          <rect x="6" y="72" width="22" height="22"/><rect x="10" y="76" width="14" height="14" fill="#fff"/><rect x="14" y="80" width="6" height="6"/>
+          <rect x="34" y="6" width="6" height="6"/><rect x="44" y="6" width="6" height="6"/><rect x="58" y="6" width="6" height="6"/>
+          <rect x="34" y="16" width="6" height="6"/><rect x="50" y="16" width="6" height="6"/>
+          <rect x="34" y="34" width="6" height="6"/><rect x="44" y="34" width="6" height="6"/><rect x="58" y="34" width="6" height="6"/><rect x="72" y="34" width="6" height="6"/><rect x="84" y="34" width="6" height="6"/>
+          <rect x="6" y="44" width="6" height="6"/><rect x="20" y="44" width="6" height="6"/><rect x="34" y="44" width="6" height="6"/><rect x="50" y="44" width="6" height="6"/><rect x="64" y="44" width="6" height="6"/><rect x="78" y="44" width="6" height="6"/>
+          <rect x="40" y="54" width="6" height="6"/><rect x="54" y="54" width="6" height="6"/><rect x="68" y="54" width="6" height="6"/><rect x="84" y="54" width="6" height="6"/>
+          <rect x="34" y="64" width="6" height="6"/><rect x="46" y="64" width="6" height="6"/><rect x="60" y="64" width="6" height="6"/><rect x="74" y="64" width="6" height="6"/>
+          <rect x="36" y="78" width="6" height="6"/><rect x="50" y="78" width="6" height="6"/><rect x="64" y="84" width="6" height="6"/><rect x="78" y="78" width="6" height="6"/>
+          <rect x="44" y="88" width="6" height="6"/><rect x="58" y="88" width="6" height="6"/><rect x="72" y="88" width="6" height="6"/>
+        </g>
+      </svg>
+    </div>
+    <p class="gift-note">Replace this placeholder with your real GCash / Maya QR image before sending out invitations. Scan to send a gift to <strong>Jayda's Birthday Fund</strong>.</p>
+  </div>
+</section>
+
+<!-- ===================== RSVP ===================== -->
+<section class="section reveal" id="rsvp">
+  <p class="section-eyebrow">Will You Join Our Magic Carpet Ride?</p>
+  <h2 class="section-title">RSVP</h2>
+  <div class="divider"></div>
+  <div style="height:2rem"></div>
+
+  <div class="rsvp-card">
+    <form id="rsvpForm">
+      <div class="form-row">
+        <label for="guestName">Your Name</label>
+        <input type="text" id="guestName" name="guestName" required placeholder="e.g., Maria Santos">
+      </div>
+      <div class="form-row">
+        <label>Will you be attending?</label>
+        <div class="radio-group" id="attendGroup">
+          <label class="radio-pill" data-value="yes"><input type="radio" name="attending" value="yes" required>Joyfully Yes</label>
+          <label class="radio-pill" data-value="no"><input type="radio" name="attending" value="no">Can't Make It</label>
+          <label class="radio-pill" data-value="maybe"><input type="radio" name="attending" value="maybe">Not Sure Yet</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="guestCount">Number of Guests (incl. you)</label>
+        <select id="guestCount" name="guestCount">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="guestNote">Message for Jayda (optional)</label>
+        <textarea id="guestNote" name="guestNote" rows="3" placeholder="Leave a birthday wish..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send My RSVP</button>
+    </form>
+
+    <div class="rsvp-success" id="rsvpSuccess" style="display:none;">
+      <div class="check">🪄✨</div>
+      <h3>Your Wish Has Been Sent!</h3>
+      <p>Thank you for your RSVP. We can't wait to celebrate with you under the Agrabah stars.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with <span class="heart">♥</span> for Jayda's 7th Birthday · August 9, 2026</p>
+</footer>
+
+</body>
+</html>
