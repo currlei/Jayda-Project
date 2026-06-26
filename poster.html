@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --midnight:#0A1730;
+    --midnight-deep:#060F22;
+    --lapis:#15305C;
+    --gold:#D4AF37;
+    --gold-bright:#F5D27A;
+    --gold-soft:#E8C465;
+    --jasmine-purple:#8B3A9E;
+    --parchment:#F7EFD8;
+    --font-display:'Cinzel Decorative', serif;
+    --font-story:'Amiri', serif;
+    --font-body:'Quicksand', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px; height:630px; overflow:hidden;}
+  body{
+    font-family:var(--font-body);
+    background:var(--midnight);
+    position:relative;
+  }
+
+  /* Background photo, right-weighted */
+  .bg-photo{
+    position:absolute; top:0; right:0; width:560px; height:630px;
+    object-fit:cover; object-position:center top;
+  }
+  .bg-fade{
+    position:absolute; top:0; right:0; width:560px; height:630px;
+    background:linear-gradient(90deg, var(--midnight) 0%, rgba(10,23,48,0.55) 35%, rgba(10,23,48,0.15) 100%);
+  }
+  .bg-overlay-full{
+    position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 50% 60% at 75% 0%, rgba(139,58,158,0.35), transparent 60%),
+      linear-gradient(180deg, rgba(10,17,30,0.15) 0%, rgba(10,17,30,0.55) 100%);
+  }
+
+  .stars{
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(2px 2px at 8% 15%, rgba(247,239,216,0.8), transparent 50%),
+      radial-gradient(1.5px 1.5px at 22% 30%, rgba(247,239,216,0.6), transparent 50%),
+      radial-gradient(2px 2px at 14% 55%, rgba(247,239,216,0.7), transparent 50%),
+      radial-gradient(1.5px 1.5px at 30% 70%, rgba(247,239,216,0.5), transparent 50%),
+      radial-gradient(2px 2px at 6% 80%, rgba(247,239,216,0.65), transparent 50%);
+  }
+
+  .content{
+    position:relative; z-index:2;
+    padding:54px 60px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width:660px;
+  }
+
+  .eyebrow{
+    font-family:var(--font-body); font-weight:700; letter-spacing:0.32em;
+    text-transform:uppercase; font-size:18px; color:var(--gold-bright);
+    margin-bottom:18px;
+  }
+
+  .title{
+    font-family:var(--font-display); font-weight:900; font-size:56px;
+    color:var(--parchment); line-height:1.08;
+    text-shadow:0 0 30px rgba(212,175,55,0.4), 0 4px 18px rgba(0,0,0,0.5);
+    margin-bottom:6px;
+  }
+  .title .accent{
+    background:linear-gradient(100deg, var(--gold-soft), var(--gold-bright), var(--gold-soft));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .name-row{
+    display:flex; align-items:baseline; gap:18px; margin-top:18px; margin-bottom:14px;
+  }
+  .name{
+    font-family:var(--font-story); font-style:italic; font-weight:700;
+    font-size:52px; color:var(--gold-bright);
+    text-shadow:0 0 30px rgba(245,210,122,0.3);
+  }
+  .turns{
+    font-family:var(--font-body); font-weight:600; font-size:30px; color:var(--parchment); opacity:0.92;
+  }
+  .seven-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:58px; height:58px; border-radius:50%;
+    background:linear-gradient(150deg, var(--gold-bright), var(--gold) 55%, #9c7620 100%);
+    color:var(--midnight); font-family:var(--font-display); font-weight:900; font-size:30px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.4);
+  }
+
+  .details{
+    display:flex; flex-direction:column; gap:10px; margin-top:8px;
+  }
+  .detail-line{
+    display:flex; align-items:center; gap:12px;
+    font-family:var(--font-body); font-weight:600; font-size:22px; color:var(--parchment);
+  }
+  .detail-icon{
+    font-size:22px; width:28px; text-align:center; flex-shrink:0;
+  }
+
+  .cta{
+    margin-top:28px;
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--font-body); font-weight:700; font-size:19px;
+    color:var(--midnight); background:var(--gold-bright);
+    padding:12px 26px; border-radius:999px; width:fit-content;
+    box-shadow:0 10px 26px rgba(0,0,0,0.3);
+  }
+
+  /* Decorative corner flourish */
+  .corner{
+    position:absolute; width:64px; height:64px;
+  }
+  .corner svg{width:100%; height:100%;}
+  .corner.tl{top:24px; left:24px;}
+  .corner.br{bottom:24px; right:24px; transform:rotate(180deg);}
+  .photo-placeholder-label{
+    position:absolute; top:50%; right:280px; transform:translate(50%,-50%);
+    z-index:3; text-align:center; color:rgba(247,239,216,0.55);
+    font-family:var(--font-body); font-weight:600; font-size:16px;
+    width:200px;
+  }
+  .photo-placeholder-label .icon{font-size:40px; display:block; margin-bottom:8px; opacity:0.6;}
+</style>
+</head>
+<body>
+  <div class="stars"></div>
+  <img class="bg-photo" src="poster.jpg" alt="">
+  <div class="photo-placeholder-label"><span class="icon">🖼️</span>Jayda's photo<br>goes here</div>
+  <div class="bg-fade"></div>
+  <div class="bg-overlay-full"></div>
+
+  <div class="corner tl"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/></svg></div>
+  <div class="corner br"><svg viewBox="0 0 34 34"><path d="M2 32V10 Q2 2 10 2 H32" fill="none" stroke="#D4AF37" stroke-width="2"/></svg></div>
+
+  <div class="content">
+    <p class="eyebrow">You Are Invited To</p>
+    <h1 class="title">A Whole New <span class="accent">World</span></h1>
+
+    <div class="name-row">
+      <span class="name">Jayda Reisse</span>
+      <span class="turns">turns</span>
+      <span class="seven-badge">7</span>
+    </div>
+
+    <div class="details">
+      <div class="detail-line"><span class="detail-icon">📅</span> Sunday, August 9, 2026 · 1:00 PM</div>
+      <div class="detail-line"><span class="detail-icon">📍</span> Paragos, Bayambang, Pangasinan</div>
+    </div>
+
+    <div class="cta">✨ Tap to Open Your Invitation</div>
+  </div>
+</body>
+</html>
