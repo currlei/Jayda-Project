@@ -497,6 +497,18 @@ if(navToggleBtn && siteHeader){
   if(navBackdrop){
     navBackdrop.addEventListener('click', closeMobileNav);
   }
+  // Catch-all: clicking ANYWHERE outside the open menu closes it — this
+  // covers spots the backdrop doesn't reach, like empty header space
+  // next to the hamburger button (the header sits above the backdrop
+  // in z-index, so clicks there wouldn't otherwise hit the backdrop).
+  document.addEventListener('click', (e)=>{
+    if(!siteHeader.classList.contains('open')) return;
+    const clickedInsideMenu = e.target.closest('.site-nav');
+    const clickedToggleBtn = e.target.closest('#navToggle');
+    if(!clickedInsideMenu && !clickedToggleBtn){
+      closeMobileNav();
+    }
+  });
 }
 
 // ---------- Scroll reveal (IntersectionObserver) ----------
